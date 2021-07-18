@@ -660,7 +660,6 @@ body {
       rgba(36, 75, 247, 0.829)
     )
     no-repeat center center/cover;
-  backdrop-filter: blur(35px);
 }
 .teamcontainer {
   display: flex;
@@ -718,7 +717,6 @@ body {
   background: transparent;
   border-radius: 10px;
   transition: border 1s;
-  position: relative;
 }
 
 /*CLOSE BRACKET*/
@@ -737,7 +735,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .card0 {
@@ -920,7 +917,6 @@ ul.socialIcons {
   background: rgb(0, 24, 36);
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   top: -70px;
   justify-content: center;
   text-align: center;
