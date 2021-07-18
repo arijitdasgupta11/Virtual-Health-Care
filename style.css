@@ -1290,7 +1290,7 @@ textarea:hover {
   .clientheader:hover {
     cursor:pointer;
     transition: 0.8s;
-    transform: scale(1.019);
+    transform: scale(1.00222);
     background-image: linear-gradient(90deg,rgb(218, 68, 255), rgb(179, 6, 179));
   }
 }
