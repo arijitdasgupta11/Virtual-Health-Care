@@ -631,6 +631,7 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   text-align: center;
+  transform: scale(1.22);
   justify-content: center;
   background-image: linear-gradient(35deg, #b6ad07, #e93c6d);
   background-repeat: repeat;
@@ -1115,7 +1116,7 @@ ul.socialIcons {
 }
 .testimoheading a:hover {
   transition: 0.8s;
-  font-size: 3.63rem;
+  font-size: 3.177rem;
   background-image: linear-gradient(45deg, #ffffffd3, #04729e);
   background-size: 100%;
   background-repeat: repeat;
@@ -1284,6 +1285,14 @@ textarea:hover {
   transition: 0.8s;
   transform: scale(1.2);
   background-image: linear-gradient(90deg,rgb(218, 68, 255), rgb(179, 6, 179));
+}
+@media(max-width:600px){
+  .clientheader:hover {
+    cursor:pointer;
+    transition: 0.8s;
+    transform: scale(1.029);
+    background-image: linear-gradient(90deg,rgb(218, 68, 255), rgb(179, 6, 179));
+  }
 }
 .section-padding {
   padding: 60px 0;
