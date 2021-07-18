@@ -50,7 +50,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 73px;
+    height: 60px;
     padding: 1rem;
     background-color: rgba(11, 12, 12, 0.5);
     display: block;
@@ -59,9 +59,13 @@ body {
     text-decoration: none;
   }
 }
-
+.nav{
+  position:fixed;
+}
 .nav ul {
   display: flex;
+  position:fixed;
+  overflow:hidden;
   text-decoration: none;
 }
 
@@ -365,15 +369,17 @@ body {
 }
 @media (max-width: 1200px) {
   #logo img {
-    float: right;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    position:fixed;
+    top:5px;
+   right: 0;
+    float:left;
     height: 47px;
     width: 47px;
   }
 }
-
+#logo img{
+  text-decoration: none;
+}
 /*DON'T TOUCH ABOVE CODE*/
 
 /*SERVICES*/
@@ -429,7 +435,7 @@ body {
 .servicecontainer .servicecard .servicecontent h2 {
   font-family: "Times New Roman", Times, serif;
   position: absolute;
-  right: 10px;
+  right: 7px;
   font-size: 4em;
   font-weight: 800;
   color: #3540a8;
@@ -512,6 +518,7 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 @media (max-width: 710px) {
@@ -532,7 +539,7 @@ body {
   background: url("giphy-coronavirus.gif") no-repeat center center/cover;
   min-height: 100vh;
   min-width: 100vw;
-  display: inline-flex;
+  display:flex;
   flex-wrap: wrap;
   text-align: center;
   align-items: center;
@@ -542,7 +549,7 @@ body {
 .aboutbg {
   float: right;
 }
-.panel {
+ .panel {
   float: right;
   position: relative;
   background-image: linear-gradient(
@@ -559,14 +566,14 @@ body {
   padding: 60px;
   box-shadow: rgba(255, 255, 255, 0.5) -20px -20px 45px inset,
     rgba(0, 0, 0, 0.1) 10px 10px 20px, rgba(0, 0, 0, 0.06) 5px 5px 10px;
-  position: relative;
-
-  &::before {
+  /* position: relative; */
+ }
+  .panel::before {
     content: "";
     display: flex;
     position: relative;
     top: 0;
-    left: 50px;
+    left: 0px;
     right: 0;
     bottom: 0;
     background-image: linear-gradient(
@@ -577,14 +584,20 @@ body {
     );
     pointer-events: none;
   }
-}
 .aboutbg h2 {
   font-size: 2.5em;
-  font-weight: 1000;
-  margin-top: 0;
+  /* font-weight: 1000; */
+  /* margin-top: 0; */
 }
+.aboutbg{
+  justify-content: center;
+  display:flex;
+  flex-wrap: wrap;
+  text-align: center;
 
+}
 .card__text {
+  overflow: hidden;
   font-size: 21px;
   line-height: 1.45;
   opacity: 0.8;
@@ -603,6 +616,16 @@ body {
   -moz-text-fill-color: transparent;
   /* position:relative; */
   font-size: 9rem;
+}
+@media(max-width:700px)
+{
+  .aboutus h1 {
+    font-size: 2.7rem;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 }
 .aboutus h1:hover {
   display: inline-flex;
@@ -648,9 +671,8 @@ body {
 .teamh1 {
   margin: 20px;
   display: inline-block;
-  font-size: 3.25rem;
+  font-size: 3.65rem;
   background-size: 100%;
-  background-color: red;
   background-image: linear-gradient(45deg, #f3ec78, #af4261);
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -658,7 +680,24 @@ body {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-
+@media(max-width:500px)
+{
+  .teamh1 {
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+    display:block;
+    font-size: 2.25rem;
+    background-size: 100%;
+    background-color: red;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
 .teamh1:hover {
   transition: 0.4s;
   display: inline-block;
@@ -894,6 +933,7 @@ ul.socialIcons {
 .testimocard {
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   margin: 15px;
 }
@@ -910,6 +950,22 @@ ul.socialIcons {
   margin: 50px;
   box-shadow: 0 5px 20px rgba(207, 199, 199, 0.846);
   overflow: hidden;
+}
+@media(max-width:500px)
+{
+  .testimocontainer .testimocard {
+    padding: 10px;
+    position: relative;
+    width: 300px;
+    height: 370px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 5px 20px rgba(207, 199, 199, 0.846);
+    overflow: hidden;
+  }
 }
 
 .testimocontainer .testimocard:hover {
@@ -971,7 +1027,6 @@ ul.socialIcons {
   transform: 0.5s;
   margin-top: 17px;
 }
-
 .testimocontainer .testimocard:hover .testimocontent p,
 .testimocontainer .testimocard:hover .testimocontent h3 {
   opacity: 1;
@@ -1012,6 +1067,8 @@ ul.socialIcons {
 }
 
 .testimocontent p {
+  margin:0;
+  padding: 0;
   background: rgba(255, 5, 5, 0.1) blur(2px);
 }
 
@@ -1019,9 +1076,9 @@ ul.socialIcons {
   min-height: 150px;
   background: rgb(0, 24, 36);
   text-align: center;
+  justify-content: center;
   align-items: center;
 }
-
 .testimoheading a {
   background-image: linear-gradient(45deg, #03597a, #fffffffa);
   background-size: 100%;
@@ -1038,7 +1095,24 @@ ul.socialIcons {
   text-decoration: none;
   transition: 2s;
 }
-
+@media(max-width:500px){
+  .testimoheading a {
+    background-image: linear-gradient(45deg, #03597a, #fffffffa);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-family: inherit;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 2s;
+  }
+}
 .testimoheading a:hover {
   transition: 0.8s;
   font-size: 3.63rem;
@@ -1189,7 +1263,7 @@ textarea:hover {
 
 .ourpartners {
   min-height: 50vh;
-  background: linear-gradient(120deg, rgb(52, 13, 23), rgb(111, 187, 223));
+  background: linear-gradient(120deg, rgb(52, 13, 23), rgb(10, 74, 104));
 }
 .clientheader {
   margin-top: 0;
@@ -1197,7 +1271,7 @@ textarea:hover {
   left: 50%;
   top: 0;
   font-size: 5rem;
-  background-image: linear-gradient(45deg, #000000fa, #f00909);
+  background-image: linear-gradient(45deg,rgb(179, 6, 179),rgb(218, 68, 255));
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -1206,9 +1280,10 @@ textarea:hover {
   -moz-text-fill-color: transparent;
 }
 .clientheader:hover {
-  transition: 0.4s;
+  cursor:pointer;
+  transition: 0.8s;
   transform: scale(1.2);
-  background-image: linear-gradient(90deg, #f00909, black);
+  background-image: linear-gradient(90deg,rgb(218, 68, 255), rgb(179, 6, 179));
 }
 .section-padding {
   padding: 60px 0;
