@@ -557,7 +557,6 @@ body {
     rgba(0, 0, 0, 0.404),
     rgba(56, 48, 48, 0.1)
   );
-  backdrop-filter: blur(6px);
   border-radius: 12px;
   height: 540px;
   width: 420px;
@@ -614,7 +613,6 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  /* position:relative; */
   font-size: 9rem;
 }
 @media(max-width:700px)
