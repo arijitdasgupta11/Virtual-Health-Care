@@ -114,8 +114,8 @@ body {
 
 .showcase:before {
   content: "";
-  filter: blur(2.35px);
-  -webkit-filter: blur(2.45px);
+ filter: blur(1.8px);
+  -webkit-filter: blur(1.88px);
   background: url("608326eb86c7bfa01fce444f_Virtula Booth.gif");
   z-index: -1;
   justify-content: center;
