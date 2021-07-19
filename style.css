@@ -6,6 +6,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -59,13 +60,13 @@ body {
     text-decoration: none;
   }
 }
-.nav{
-  position:fixed;
+.nav {
+  position: fixed;
 }
 .nav ul {
   display: flex;
-  position:fixed;
-  overflow:hidden;
+  position: fixed;
+  overflow: hidden;
   text-decoration: none;
 }
 
@@ -369,15 +370,15 @@ body {
 }
 @media (max-width: 1200px) {
   #logo img {
-    position:fixed;
-    top:5px;
-   right: 0;
-    float:left;
+    position: fixed;
+    top: 5px;
+    right: 0;
+    float: left;
     height: 47px;
     width: 47px;
   }
 }
-#logo img{
+#logo img {
   text-decoration: none;
 }
 /*DON'T TOUCH ABOVE CODE*/
@@ -539,7 +540,7 @@ body {
   background: url("giphy-coronavirus.gif") no-repeat center center/cover;
   min-height: 100vh;
   min-width: 100vw;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   text-align: center;
   align-items: center;
@@ -549,14 +550,15 @@ body {
 .aboutbg {
   float: right;
 }
- .panel {
+.panel {
   float: right;
-  position: relative;
+  /* position: relative; */
   background-image: linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.404),
     rgba(56, 48, 48, 0.1)
   );
+  backdrop-filter: blur(6px);
   border-radius: 12px;
   height: 540px;
   width: 420px;
@@ -565,35 +567,33 @@ body {
   padding: 60px;
   box-shadow: rgba(255, 255, 255, 0.5) -20px -20px 45px inset,
     rgba(0, 0, 0, 0.1) 10px 10px 20px, rgba(0, 0, 0, 0.06) 5px 5px 10px;
+}
+.panel::before {
+  content: "";
+  display: flex;
   /* position: relative; */
- }
-  .panel::before {
-    content: "";
-    display: flex;
-    position: relative;
-    top: 0;
-    left: 0px;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.05) 40%,
-      rgba(255, 255, 255, 0) 40%
-    );
-    pointer-events: none;
-  }
+  top: 0;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    rgba(255, 255, 255, 0) 40%
+  );
+  pointer-events: none;
+}
 .aboutbg h2 {
   font-size: 2.5em;
   /* font-weight: 1000; */
   /* margin-top: 0; */
 }
-.aboutbg{
+.aboutbg {
   justify-content: center;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   text-align: center;
-
 }
 .card__text {
   overflow: hidden;
@@ -613,12 +613,12 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  /* position:relative; */
   font-size: 9rem;
 }
-@media(max-width:700px)
-{
+@media (max-width: 700px) {
   .aboutus h1 {
-    font-size: 2.7rem;
+    font-size: 4rem;
     display: inline-block;
     align-items: center;
     text-align: center;
@@ -629,7 +629,7 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   text-align: center;
-  transition:0.7s;
+  transition: 0.44s;
   justify-content: center;
   background-image: linear-gradient(35deg, #b6ad07, #e93c6d);
   background-repeat: repeat;
@@ -658,6 +658,7 @@ body {
       rgba(36, 75, 247, 0.829)
     )
     no-repeat center center/cover;
+  /* backdrop-filter: blur(35px); */
 }
 .teamcontainer {
   display: flex;
@@ -678,13 +679,12 @@ body {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-@media(max-width:500px)
-{
+@media (max-width: 500px) {
   .teamh1 {
     margin: 20px;
     text-align: center;
     justify-content: center;
-    display:block;
+    display: block;
     font-size: 2.25rem;
     background-size: 100%;
     background-color: red;
@@ -715,6 +715,7 @@ body {
   background: transparent;
   border-radius: 10px;
   transition: border 1s;
+  /* position: relative; */
 }
 
 /*CLOSE BRACKET*/
@@ -733,6 +734,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  /* position: relative; */
 }
 
 .card0 {
@@ -915,6 +917,7 @@ ul.socialIcons {
   background: rgb(0, 24, 36);
   display: flex;
   flex-wrap: wrap;
+  /* position: relative; */
   top: -70px;
   justify-content: center;
   text-align: center;
@@ -946,8 +949,7 @@ ul.socialIcons {
   box-shadow: 0 5px 20px rgba(207, 199, 199, 0.846);
   overflow: hidden;
 }
-@media(max-width:500px)
-{
+@media (max-width: 500px) {
   .testimocontainer .testimocard {
     padding: 10px;
     position: relative;
@@ -1062,7 +1064,7 @@ ul.socialIcons {
 }
 
 .testimocontent p {
-  margin:0;
+  margin: 0;
   padding: 0;
   background: rgba(255, 5, 5, 0.1) blur(2px);
 }
@@ -1083,14 +1085,14 @@ ul.socialIcons {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   font-family: inherit;
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
   text-decoration: none;
   transition: 2s;
 }
-@media(max-width:900px){
+/*@media(max-width:900px){
   .testimoheading a {
     background-image: linear-gradient(45deg, #03597a, #fffffffa);
     background-size: 100%;
@@ -1100,7 +1102,7 @@ ul.socialIcons {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     font-family: inherit;
-    font-size: 1.789rem;
+    font-size: 1.8rem;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -1108,20 +1110,20 @@ ul.socialIcons {
     transition: 2s;
   }
   .testimoheading a:hover {
-  transition: 0.8s;
-  font-size: 1.795rem;
-  background-image: linear-gradient(45deg, #ffffffd3, #04729e);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-}
+    transition: 0.8s;
+    font-size:1.807rem;
+    background-image: linear-gradient(45deg, #ffffffd3, #04729e);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}*/
 .testimoheading a:hover {
   transition: 0.8s;
-  font-size: 3.737rem;
+  font-size: 3.517rem;
   background-image: linear-gradient(45deg, #ffffffd3, #04729e);
   background-size: 100%;
   background-repeat: repeat;
@@ -1277,7 +1279,7 @@ textarea:hover {
   left: 50%;
   top: 0;
   font-size: 5rem;
-  background-image: linear-gradient(45deg,rgb(179, 6, 179),rgb(218, 68, 255));
+  background-image: linear-gradient(45deg, rgb(179, 6, 179), rgb(218, 68, 255));
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -1286,17 +1288,21 @@ textarea:hover {
   -moz-text-fill-color: transparent;
 }
 .clientheader:hover {
-  cursor:pointer;
+  cursor: pointer;
   transition: 0.8s;
   transform: scale(1.2);
-  background-image: linear-gradient(90deg,rgb(218, 68, 255), rgb(179, 6, 179));
+  background-image: linear-gradient(90deg, rgb(218, 68, 255), rgb(179, 6, 179));
 }
-@media(max-width:800px){
+@media (max-width: 600px) {
   .clientheader:hover {
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.8s;
-    transform: scale(1.00222);
-    background-image: linear-gradient(90deg,rgb(218, 68, 255), rgb(179, 6, 179));
+    transform: scale(1.029);
+    background-image: linear-gradient(
+      90deg,
+      rgb(218, 68, 255),
+      rgb(179, 6, 179)
+    );
   }
 }
 .section-padding {
