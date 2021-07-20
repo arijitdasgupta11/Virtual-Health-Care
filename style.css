@@ -211,12 +211,12 @@ body {
 @media(max-width:1080px){
   .showcase h1 {
     position: absolute;
-    top: 185px;
+    top: 180px;
     /* left:125px; */
     justify-content: center;
     align-items: center;
     font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     box-shadow: 0 4px 25px 20px rgba(27, 27, 27, 0.698);
     background-image: linear-gradient(
       45deg,
