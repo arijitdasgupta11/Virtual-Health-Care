@@ -175,10 +175,10 @@ body {
   animation-direction: alternate-reverse;
   animation-fill-mode: initial;
 }
-@media(max-width:1180px){
+@media(max-width:1080px){
   .showcase h1 {
     position: absolute;
-    top: 280px;
+    top: 200px;
     /* left:125px; */
     justify-content: center;
     align-items: center;
