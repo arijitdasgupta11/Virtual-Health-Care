@@ -178,7 +178,7 @@ body {
 @media(max-width:1180px){
   .showcase h1 {
     position: absolute;
-    top: 380px;
+    top: 280px;
     /* left:125px; */
     justify-content: center;
     align-items: center;
