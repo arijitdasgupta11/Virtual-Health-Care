@@ -208,10 +208,10 @@ body {
     background-position: 0 0;
   }
 }
-@media(max-width:1180px){
+@media(max-width:1080px){
   .showcase h1 {
     position: absolute;
-    top: 380px;
+    top: 200px;
     /* left:125px; */
     justify-content: center;
     align-items: center;
