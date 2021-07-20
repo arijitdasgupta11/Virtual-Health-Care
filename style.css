@@ -114,7 +114,7 @@ body {
 
 .showcase:before {
   content: "";
- filter: blur(1.8px);
+  filter: blur(1.8px);
   -webkit-filter: blur(1.88px);
   background: url("608326eb86c7bfa01fce444f_Virtula Booth.gif");
   z-index: -1;
@@ -161,7 +161,18 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 4.5vw;
   box-shadow: 0 4px 25px 20px rgba(27, 27, 27, 0.498);
-  background-image:linear-gradient(315deg, #0804e6 20%, #d32d03 94%);
+  background-image: linear-gradient(
+      45deg,
+      #bd080e 16.666%, 
+      #dd4b23 16.666%, 
+      #1038be 33.333%, 
+      #ec2a1c 33.333%, 
+      #d65104 50%, 
+      #6b8120 50%, 
+      #739110 66.666%, 
+      #0444ce 66.666%, 
+      #00277c 83.333%, 
+      #811973 83.333%);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -174,18 +185,51 @@ body {
   animation-iteration-count: 1;
   animation-direction: alternate-reverse;
   animation-fill-mode: initial;
+  cursor:pointer;
+  animation-name: rainbow-text-animation-rev 0.5s ease forwards;
+
 }
-@media(max-width:1080px){
+.showcase h1:hover{
+ transition-duration: 2s;
+    background-size: 300%;
+    background-position: -9em 1em;
+}
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
+@media(max-width:1180px){
   .showcase h1 {
     position: absolute;
-    top: 200px;
+    top: 380px;
     /* left:125px; */
     justify-content: center;
     align-items: center;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 3.5rem;
     box-shadow: 0 4px 25px 20px rgba(27, 27, 27, 0.698);
-     background-image:linear-gradient(315deg, #0804e6 20%, #d32d03 94%);
+    background-image: linear-gradient(
+      45deg,
+      #bd080e 16.666%, 
+      #fc2819 16.666%, 
+      #1038be 33.333%, 
+      #ec2a1c 33.333%, 
+      #4b00c4 50%, 
+      #6b8120 50%, 
+      #92be00 66.666%, 
+      #0444ce 66.666%, 
+      #00277c 83.333%, 
+      #811973 83.333%);
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
